@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         return configuration
     }()
     
-    var image = UIImage(named: "art.scnassets/sword.png")!
+    var image = UIImage(named: "art.scnassets/grandfront_rayer1.png")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +69,8 @@ extension ViewController: ARSCNViewDelegate {
         node.position = position
         return node
     }
+    
+    
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let imageAnchor = anchor as? ARImageAnchor else {

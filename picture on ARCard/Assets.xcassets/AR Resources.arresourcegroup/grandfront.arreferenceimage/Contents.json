@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "environment.jpeg"
+      "filename" : "grandfront.png"
     }
   ],
   "info" : {
@@ -10,7 +10,6 @@
     "author" : "xcode"
   },
   "properties" : {
-    "width" : 12,
-    "unit" : "centimeters"
+    "width" : 15
   }
 }
