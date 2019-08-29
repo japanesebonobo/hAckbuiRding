@@ -13,6 +13,7 @@ import ARKit
 class ViewController: UIViewController {
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var button_layer1: UIButton!
+    @IBOutlet weak var grandfront_layer1: UIButton!
     
     let defaultConfiguration: ARWorldTrackingConfiguration = {
         let configuration = ARWorldTrackingConfiguration()
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
     }()
     
     let image = UIImage(named:"art.scnassets/button_layer1.png")!
-    var image2 = UIImage(named: "art.scnassets/grandfront_layer1.png")!
+    let image2 = UIImage(named: "art.scnassets/grandfront_layer1.png")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,8 @@ class ViewController: UIViewController {
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         button_layer1.setImage(image, for: .normal)
         button_layer1.isHidden = true
+        grandfront_layer1.setImage(image2, for: .normal)
+        grandfront_layer1.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,9 +52,13 @@ class ViewController: UIViewController {
         sceneView.session.pause()
     }
     
-    @IBAction func button_layer1Tapped(_ sender: Any) {
+    @IBAction func button_layer1Tapped(_ sender: UIButton) {
         self.button_layer1.isHidden = true
-        setImageToScene(image: image2, scale: 0.17, position: SCNVector3(-0.07, -0.10, -0.5))
+        self.grandfront_layer1.isHidden = false
+    }
+    
+    @IBAction func grandfront_layer1Tapped(_ sender: UIButton) {
+        
     }
 }
 

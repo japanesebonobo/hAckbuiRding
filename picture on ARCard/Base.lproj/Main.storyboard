@@ -34,12 +34,21 @@
                                     <action selector="button_layer1Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="HW9-AS-bZU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF2-wv-olS">
+                                <rect key="frame" x="16" y="310" width="178" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="grandfront_layer1.png"/>
+                                <connections>
+                                    <action selector="grandfront_layer1Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="46X-Z5-ZLJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
                     <connections>
                         <outlet property="button_layer1" destination="MoH-Br-uNc" id="9YR-Y2-CcH"/>
+                        <outlet property="grandfront_layer1" destination="LF2-wv-olS" id="WMs-YB-zjh"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="pI4-R2-82f"/>
                     </connections>
                 </viewController>
@@ -55,5 +64,6 @@
     </scenes>
     <resources>
         <image name="button_layer1.png" width="173.75999450683594" height="173.52000427246094"/>
+        <image name="grandfront_layer1.png" width="555.5999755859375" height="444.48001098632812"/>
     </resources>
 </document>
