@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class OneFloorViewController: UIViewController {
 
@@ -15,6 +16,33 @@ class OneFloorViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+
+    @IBAction func GatetwoTapped() {
+        guard let url = URL(string: "https://loco.yahoo.co.jp/place/g-yvFd0QMDfUc/") else { return }
+        let safariController = SFSafariViewController(url: url)
+        present(safariController, animated: true, completion: nil)
+    }
+    
+    @IBAction func CurryTapped(_ sender: UIButton) {
+        guard let url = URL(string: "https://loco.yahoo.co.jp/place/g-XckY4IQ7Tdo/?genrecd=01") else { return }
+        let safariController = SFSafariViewController(url: url)
+        present(safariController, animated: true, completion: nil)
+    }
+    
+    @IBAction func BibTapped(_ sender: UIButton) {
+        guard let url = URL(string: "https://loco.yahoo.co.jp/place/g-GKUDsR6MdxM/?genrecd=01") else { return }
+        let safariController = SFSafariViewController(url: url)
+        present(safariController, animated: true, completion: nil)
+    }
+    
+    @IBAction func AuxTapped(_ sender: UIButton) {
+        guard let url = URL(string: "https://loco.yahoo.co.jp/place/g-q-JYZh6MdxM/?genrecd=01") else { return }
+        let safariController = SFSafariViewController(url: url)
+        present(safariController, animated: true, completion: nil)
+    }
+    
+    
     
     /*
     // MARK: - Navigation

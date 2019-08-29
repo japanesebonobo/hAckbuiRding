@@ -152,7 +152,7 @@
         <!--OneFloorViewController-->
         <scene sceneID="wWa-Zc-1Te">
             <objects>
-                <viewController title="OneFloorViewController" id="DRc-85-IOp" sceneMemberID="viewController">
+                <viewController title="OneFloorViewController" id="DRc-85-IOp" customClass="OneFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0mk-yS-bZq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,6 +197,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="GatetwoTapped" destination="DRc-85-IOp" eventType="touchUpInside" id="kMa-ds-aOx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZD-be-4em">
                                                 <rect key="frame" x="8" y="270" width="150" height="150"/>
@@ -204,6 +207,9 @@
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                 <state key="normal" title="bib baR"/>
+                                                <connections>
+                                                    <action selector="BibTapped:" destination="DRc-85-IOp" eventType="touchUpInside" id="ge9-k7-6G7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIj-Ft-LsX">
                                                 <rect key="frame" x="162" y="116" width="150" height="150"/>
@@ -212,6 +218,7 @@
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                 <state key="normal" title="カレー居酒屋YELLOW"/>
                                                 <connections>
+                                                    <action selector="CurryTapped:" destination="DRc-85-IOp" eventType="touchUpInside" id="tKZ-i3-uAa"/>
                                                     <action selector="あ:" destination="VHj-AV-qJw" eventType="touchUpInside" id="JwS-U2-v1I"/>
                                                 </connections>
                                             </button>
@@ -221,6 +228,9 @@
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                 <state key="normal" title="AUX BACCHANALES"/>
+                                                <connections>
+                                                    <action selector="AuxTapped:" destination="DRc-85-IOp" eventType="touchUpInside" id="A2V-rY-wCt"/>
+                                                </connections>
                                             </button>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vpv-T9-Ev2">
                                                 <rect key="frame" x="0.0" y="504" width="320" height="44"/>
