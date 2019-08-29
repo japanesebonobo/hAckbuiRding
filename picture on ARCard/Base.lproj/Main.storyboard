@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BV1-FR-VrT" customClass="ViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,6 +54,7 @@
                                 <state key="normal" image="1F_layer2.png"/>
                                 <connections>
                                     <action selector="one_layer2Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="5ul-nM-ojd"/>
+                                    <segue destination="DRc-85-IOp" kind="presentation" id="2Cl-Ge-l1J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-Uw-B9O">
@@ -147,6 +148,123 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="50.625" y="20.070422535211268"/>
+        </scene>
+        <!--OneFloorViewController-->
+        <scene sceneID="wWa-Zc-1Te">
+            <objects>
+                <viewController title="OneFloorViewController" id="DRc-85-IOp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0mk-yS-bZq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLr-EH-P6u">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bxx-Q5-1xj" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPm-HV-uRk">
+                                                <rect key="frame" x="112" y="0.0" width="200" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5K4-on-lzx">
+                                                <rect key="frame" x="8" y="0.0" width="85" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E4S-59-hRn">
+                                                <rect key="frame" x="8" y="116" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="GATE2 FIELDER">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="’">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="S CHOICE">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZD-be-4em">
+                                                <rect key="frame" x="8" y="270" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <state key="normal" title="bib baR"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIj-Ft-LsX">
+                                                <rect key="frame" x="162" y="116" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <state key="normal" title="カレー居酒屋YELLOW"/>
+                                                <connections>
+                                                    <action selector="あ:" destination="VHj-AV-qJw" eventType="touchUpInside" id="JwS-U2-v1I"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1VQ-94-g8K">
+                                                <rect key="frame" x="162" y="270" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <state key="normal" title="AUX BACCHANALES"/>
+                                            </button>
+                                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vpv-T9-Ev2">
+                                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <items>
+                                                    <barButtonItem title="Back" id="2DF-eT-1Ym">
+                                                        <connections>
+                                                            <segue destination="BV1-FR-VrT" kind="presentation" id="m9T-y1-EaX"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </items>
+                                            </toolbar>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="568" constant="568" id="CG5-yK-Cds"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Bxx-Q5-1xj" secondAttribute="bottom" id="3P7-ao-mXp"/>
+                                    <constraint firstItem="Bxx-Q5-1xj" firstAttribute="leading" secondItem="DLr-EH-P6u" secondAttribute="leading" id="SGa-Jm-ahW"/>
+                                    <constraint firstItem="Bxx-Q5-1xj" firstAttribute="top" secondItem="DLr-EH-P6u" secondAttribute="top" id="rSp-l2-mWL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bxx-Q5-1xj" secondAttribute="trailing" id="w8Q-UV-Lf6"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DLr-EH-P6u" firstAttribute="top" secondItem="fLu-Y4-JA7" secondAttribute="top" priority="568" id="57W-hK-rEA"/>
+                            <constraint firstItem="fLu-Y4-JA7" firstAttribute="bottom" secondItem="DLr-EH-P6u" secondAttribute="bottom" priority="568" id="66y-Ca-XUD"/>
+                            <constraint firstItem="Bxx-Q5-1xj" firstAttribute="height" secondItem="0mk-yS-bZq" secondAttribute="height" priority="250" id="KJU-s7-ZhN"/>
+                            <constraint firstItem="Bxx-Q5-1xj" firstAttribute="width" secondItem="0mk-yS-bZq" secondAttribute="width" priority="568" id="ZRJ-Qk-WwJ"/>
+                            <constraint firstItem="fLu-Y4-JA7" firstAttribute="trailing" secondItem="DLr-EH-P6u" secondAttribute="trailing" priority="568" id="cAH-2f-tST"/>
+                            <constraint firstItem="DLr-EH-P6u" firstAttribute="leading" secondItem="fLu-Y4-JA7" secondAttribute="leading" priority="568" id="uHK-iw-KK7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fLu-Y4-JA7"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCu-07-SsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="VHj-AV-qJw" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="995.625" y="19.014084507042252"/>
         </scene>
     </scenes>
     <resources>

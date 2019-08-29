@@ -92,6 +92,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
         sceneView.session.run(defaultConfiguration)
+        sceneView.reloadInputViews()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -148,7 +149,6 @@ class ViewController: UIViewController {
     
     @IBAction func nine_layer2Tapped(_ sender: UIButton) {
     }
-    
 }
 
 extension ViewController: ARSCNViewDelegate {

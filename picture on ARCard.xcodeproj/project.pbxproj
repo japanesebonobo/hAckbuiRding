@@ -42,6 +42,7 @@
 		37F9C30823178C210054D66B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C2EB23178C200054D66B /* LoadingView.swift */; };
 		37F9C30923178C210054D66B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37F9C2EC23178C200054D66B /* Info.plist */; };
 		37F9C30A23178C210054D66B /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C2ED23178C200054D66B /* AsyncImageView.swift */; };
+		37F9C30C2318183E0054D66B /* OneFloorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C30B2318183E0054D66B /* OneFloorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		37F9C2EB23178C200054D66B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		37F9C2EC23178C200054D66B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37F9C2ED23178C200054D66B /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		37F9C30B2318183E0054D66B /* OneFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFloorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				37F9C2BA23155FD70054D66B /* AppDelegate.swift */,
 				37F9C2BC23155FD70054D66B /* art.scnassets */,
 				37F9C2BE23155FD70054D66B /* ViewController.swift */,
+				37F9C30B2318183E0054D66B /* OneFloorViewController.swift */,
 				37F9C2C023155FD70054D66B /* Main.storyboard */,
 				37F9C2C323155FD80054D66B /* Assets.xcassets */,
 				37F9C2C523155FD80054D66B /* LaunchScreen.storyboard */,
@@ -240,6 +243,7 @@
 			files = (
 				37F9C30723178C210054D66B /* UnwindSegue.swift in Sources */,
 				37F9C30323178C210054D66B /* SpringLabel.swift in Sources */,
+				37F9C30C2318183E0054D66B /* OneFloorViewController.swift in Sources */,
 				37F9C30123178C210054D66B /* AsyncButton.swift in Sources */,
 				37F9C2F923178C210054D66B /* SpringButton.swift in Sources */,
 				37F9C2FB23178C210054D66B /* Misc.swift in Sources */,
