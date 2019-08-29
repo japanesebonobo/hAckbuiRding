@@ -18,6 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var two_layer2: UIButton!
     @IBOutlet weak var three_layer2: UIButton!
     @IBOutlet weak var four_layer2: UIButton!
+    @IBOutlet weak var five_layer2: UIButton!
+    @IBOutlet weak var six_layer2: UIButton!
+    @IBOutlet weak var seven_layer2: UIButton!
+    @IBOutlet weak var eight_layer2: UIButton!
+    @IBOutlet weak var nine_layer2: UIButton!
     
     
     let defaultConfiguration: ARWorldTrackingConfiguration = {
@@ -34,6 +39,16 @@ class ViewController: UIViewController {
     let image = UIImage(named:"art.scnassets/button_layer1.png")!
     let image2 = UIImage(named: "art.scnassets/grandfront_layer1.png")!
     
+    let onefloor_image = UIImage(named: "art.scnassets/1F_layer2.png")!
+    let secondfloor_image = UIImage(named: "art.scnassets/2F_layer2.png")!
+    let threefloor_image = UIImage(named: "art.scnassets/3F_layer2.png")!
+    let fourfloor_image = UIImage(named: "art.scnassets/4F_layer2.png")!
+    let fivefloor_image = UIImage(named: "art.scnassets/5F_layer2.png")!
+    let sixfloor_image = UIImage(named: "art.scnassets/6F_layer2.png")!
+    let sevenfloor_image = UIImage(named: "art.scnassets/7F_layer2.png")!
+    let eightfloor_image = UIImage(named: "art.scnassets/8F_layer2.png")!
+    let ninefloor_image = UIImage(named: "art.scnassets/9F_layer2.png")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,12 +56,36 @@ class ViewController: UIViewController {
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         button_layer1.setImage(image, for: .normal)
         button_layer1.isHidden = true
-        self.button_layer1.animation = "pop"
-        self.button_layer1.curve = "easeIn"
-        self.button_layer1.duration = 10
         
         grandfront_layer1.setImage(image2, for: .normal)
         grandfront_layer1.isHidden = true
+        
+        one_layer2.setImage(onefloor_image, for: .normal)
+        one_layer2.isHidden = true
+        
+        two_layer2.setImage(secondfloor_image, for: .normal)
+        two_layer2.isHidden = true
+        
+        three_layer2.setImage(threefloor_image, for: .normal)
+        three_layer2.isHidden = true
+        
+        four_layer2.setImage(fourfloor_image, for: .normal)
+        four_layer2.isHidden = true
+        
+        five_layer2.setImage(fivefloor_image, for: .normal)
+        five_layer2.isHidden = true
+        
+        six_layer2.setImage(sixfloor_image, for: .normal)
+        six_layer2.isHidden = true
+        
+        seven_layer2.setImage(sevenfloor_image, for: .normal)
+        seven_layer2.isHidden = true
+        
+        eight_layer2.setImage(eightfloor_image, for: .normal)
+        eight_layer2.isHidden = true
+        
+        nine_layer2.setImage(ninefloor_image, for: .normal)
+        nine_layer2.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,7 +106,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func grandfront_layer1Tapped(_ sender: UIButton) {
-        
+        self.grandfront_layer1.isHidden = true
+        self.one_layer2.isHidden = false
+        self.two_layer2.isHidden = false
+        self.three_layer2.isHidden = false
+        self.four_layer2.isHidden = false
+        self.five_layer2.isHidden = false
+        self.six_layer2.isHidden = false
+        self.seven_layer2.isHidden = false
+        self.eight_layer2.isHidden = false
+        self.nine_layer2.isHidden = false
     }
     
     @IBAction func one_layer2Tapped(_ sender: UIButton) {
@@ -86,6 +134,20 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func five_layer2Tapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func six_layer2Tapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func seven_layer2Tapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func eight_layer2Tapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func nine_layer2Tapped(_ sender: UIButton) {
+    }
     
 }
 
@@ -121,7 +183,6 @@ extension ViewController: ARSCNViewDelegate {
         }
         DispatchQueue.main.async {
             self.button_layer1.isHidden = false
-            self.button_layer1.animate()
         }
     }
 }

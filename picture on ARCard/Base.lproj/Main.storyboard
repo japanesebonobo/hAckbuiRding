@@ -84,6 +84,41 @@
                                 <rect key="frame" x="230" y="201" width="90" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="5F_layer2.png"/>
+                                <connections>
+                                    <action selector="five_layer2Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="N5g-Uv-uFS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0Z-6y-c6J">
+                                <rect key="frame" x="230" y="170" width="90" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="6F_layer2.png"/>
+                                <connections>
+                                    <action selector="six_layer2Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ZfH-kY-dmp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndT-sl-ETA">
+                                <rect key="frame" x="230" y="139" width="90" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="7F_layer2.png"/>
+                                <connections>
+                                    <action selector="seven_layer2Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="jB8-2y-2Vr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njM-a7-3gr">
+                                <rect key="frame" x="230" y="108" width="90" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="8F_layer2.png"/>
+                                <connections>
+                                    <action selector="eight_layer2Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="K84-Tu-fiu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvO-ie-BLg">
+                                <rect key="frame" x="230" y="77" width="90" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="9F_layer2.png"/>
+                                <connections>
+                                    <action selector="nine_layer2Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Vp8-bg-laV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,11 +126,16 @@
                     </view>
                     <connections>
                         <outlet property="button_layer1" destination="MoH-Br-uNc" id="9YR-Y2-CcH"/>
+                        <outlet property="eight_layer2" destination="njM-a7-3gr" id="WTR-Jf-tIO"/>
+                        <outlet property="five_layer2" destination="TZm-Wh-4wo" id="sjK-l1-Dgy"/>
                         <outlet property="four_layer2" destination="Zzz-nG-dLb" id="lvC-3e-7AR"/>
                         <outlet property="grandfront_layer1" destination="LF2-wv-olS" id="WMs-YB-zjh"/>
+                        <outlet property="nine_layer2" destination="JvO-ie-BLg" id="QcB-FQ-NZQ"/>
                         <outlet property="one_layer2" destination="7eM-MK-6LG" id="xiK-cl-mew"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="pI4-R2-82f"/>
-                        <outlet property="three_layer3" destination="ahc-Za-4P5" id="BFI-h0-hs3"/>
+                        <outlet property="seven_layer2" destination="ndT-sl-ETA" id="g9w-2B-jSE"/>
+                        <outlet property="six_layer2" destination="h0Z-6y-c6J" id="76g-Ld-7Wk"/>
+                        <outlet property="three_layer2" destination="ahc-Za-4P5" id="2yW-A8-J3O"/>
                         <outlet property="two_layer2" destination="SOc-Uw-B9O" id="7LF-Yd-PST"/>
                     </connections>
                 </viewController>
@@ -115,6 +155,10 @@
         <image name="3F_layer2.png" width="328.79998779296875" height="110.87999725341797"/>
         <image name="4F_layer2.png" width="327.3599853515625" height="108.23999786376953"/>
         <image name="5F_layer2.png" width="331.20001220703125" height="108.23999786376953"/>
+        <image name="6F_layer2.png" width="327.3599853515625" height="110.16000366210938"/>
+        <image name="7F_layer2.png" width="331.20001220703125" height="110.87999725341797"/>
+        <image name="8F_layer2.png" width="328.79998779296875" height="110.87999725341797"/>
+        <image name="9F_layer2.png" width="327.3599853515625" height="108.23999786376953"/>
         <image name="button_layer1.png" width="173.75999450683594" height="173.52000427246094"/>
         <image name="grandfront_layer1.png" width="553.67999267578125" height="445.44000244140625"/>
     </resources>
