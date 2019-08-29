@@ -26,10 +26,16 @@
                                     <outletCollection property="gestureRecognizers" destination="tUg-ot-EpK" appends="YES" id="0B7-Vk-oTg"/>
                                 </connections>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoH-Br-uNc">
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoH-Br-uNc" customClass="SpringButton" customModule="picture_on_ARCard">
                                 <rect key="frame" x="127" y="251" width="67" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button_layer1.png" backgroundImage="button_layer1.png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="button_layer1Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="HW9-AS-bZU"/>
                                 </connections>
@@ -42,6 +48,11 @@
                                     <action selector="grandfront_layer1Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="46X-Z5-ZLJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eM-MK-6LG">
+                                <rect key="frame" x="230" y="38" width="90" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="1F_layer2.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
@@ -49,6 +60,7 @@
                     <connections>
                         <outlet property="button_layer1" destination="MoH-Br-uNc" id="9YR-Y2-CcH"/>
                         <outlet property="grandfront_layer1" destination="LF2-wv-olS" id="WMs-YB-zjh"/>
+                        <outlet property="one_layer2" destination="7eM-MK-6LG" id="xiK-cl-mew"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="pI4-R2-82f"/>
                     </connections>
                 </viewController>
@@ -63,7 +75,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1F_layer2.png" width="327.3599853515625" height="110.16000366210938"/>
         <image name="button_layer1.png" width="173.75999450683594" height="173.52000427246094"/>
-        <image name="grandfront_layer1.png" width="555.5999755859375" height="444.48001098632812"/>
+        <image name="grandfront_layer1.png" width="553.67999267578125" height="445.44000244140625"/>
     </resources>
 </document>

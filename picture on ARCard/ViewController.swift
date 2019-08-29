@@ -12,8 +12,9 @@ import ARKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var button_layer1: UIButton!
+    @IBOutlet weak var button_layer1: SpringButton!
     @IBOutlet weak var grandfront_layer1: UIButton!
+    @IBOutlet weak var one_layer2: UIButton!
     
     let defaultConfiguration: ARWorldTrackingConfiguration = {
         let configuration = ARWorldTrackingConfiguration()
@@ -36,6 +37,10 @@ class ViewController: UIViewController {
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         button_layer1.setImage(image, for: .normal)
         button_layer1.isHidden = true
+        self.button_layer1.animation = "pop"
+        self.button_layer1.curve = "easeIn"
+        self.button_layer1.duration = 10
+        
         grandfront_layer1.setImage(image2, for: .normal)
         grandfront_layer1.isHidden = true
     }
@@ -94,6 +99,7 @@ extension ViewController: ARSCNViewDelegate {
         }
         DispatchQueue.main.async {
             self.button_layer1.isHidden = false
+            self.button_layer1.animate()
         }
     }
 }
