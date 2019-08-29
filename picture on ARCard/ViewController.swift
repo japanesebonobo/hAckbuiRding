@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var button_layer1: SpringButton!
     @IBOutlet weak var grandfront_layer1: UIButton!
     @IBOutlet weak var one_layer2: UIButton!
+    @IBOutlet weak var two_layer2: UIButton!
+    @IBOutlet weak var three_layer2: UIButton!
+    @IBOutlet weak var four_layer2: UIButton!
+    
     
     let defaultConfiguration: ARWorldTrackingConfiguration = {
         let configuration = ARWorldTrackingConfiguration()
@@ -65,6 +69,24 @@ class ViewController: UIViewController {
     @IBAction func grandfront_layer1Tapped(_ sender: UIButton) {
         
     }
+    
+    @IBAction func one_layer2Tapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func two_layer2Tapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func three_layer2Tapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func four_layer2Tapped(_ sender: UIButton) {
+        
+    }
+    
+    
 }
 
 extension ViewController: ARSCNViewDelegate {
