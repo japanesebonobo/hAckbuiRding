@@ -63,6 +63,7 @@
                                 <state key="normal" title="Button" image="2F_layer2.png"/>
                                 <connections>
                                     <action selector="two_layer2Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="exL-bT-Sgv"/>
+                                    <segue destination="d7X-Wg-kHd" kind="presentation" id="2qZ-iU-Ouf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-Za-4P5">
@@ -71,6 +72,7 @@
                                 <state key="normal" image="3F_layer2.png"/>
                                 <connections>
                                     <action selector="three_layer2Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="RGe-sO-aMM"/>
+                                    <segue destination="UJZ-WO-Ogu" kind="presentation" id="qzo-B6-5sJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzz-nG-dLb">
@@ -276,6 +278,177 @@
             </objects>
             <point key="canvasLocation" x="995.625" y="19.014084507042252"/>
         </scene>
+        <!--SecondFloorViewController-->
+        <scene sceneID="nv7-Kl-Hs2">
+            <objects>
+                <viewController title="SecondFloorViewController" id="d7X-Wg-kHd" customClass="SecondFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6V9-ps-wmo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkE-oE-NxA">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSP-fp-q6E" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWL-vJ-Bbc">
+                                                <rect key="frame" x="112" y="0.0" width="200" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2s-vD-myW">
+                                                <rect key="frame" x="8" y="0.0" width="85" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0av-6H-IBF">
+                                                <rect key="frame" x="8" y="116" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Komin Cafe"/>
+                                                <connections>
+                                                    <action selector="KominTapped:" destination="d7X-Wg-kHd" eventType="touchUpInside" id="1ib-2e-6eo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJ5-D1-cKF">
+                                                <rect key="frame" x="8" y="270" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <state key="normal" title="Qu'il fait bon"/>
+                                                <connections>
+                                                    <action selector="QuilfaitTapped:" destination="d7X-Wg-kHd" eventType="touchUpInside" id="efO-rG-7iz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmN-RS-bhS">
+                                                <rect key="frame" x="162" y="116" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <state key="normal" title="THEODOR TeaStand"/>
+                                                <connections>
+                                                    <action selector="TheodorTapped:" destination="d7X-Wg-kHd" eventType="touchUpInside" id="UXy-J0-p9l"/>
+                                                    <action selector="あ:" destination="VHj-AV-qJw" eventType="touchUpInside" id="32A-sO-T6B"/>
+                                                    <action selector="あ:" destination="DIw-eA-3tx" eventType="touchUpInside" id="cIn-u5-mvh"/>
+                                                </connections>
+                                            </button>
+                                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOf-yg-f9x">
+                                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <items>
+                                                    <barButtonItem title="Back" id="dzK-SD-bO3">
+                                                        <connections>
+                                                            <segue destination="BV1-FR-VrT" kind="presentation" id="IXj-9f-THW"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </items>
+                                            </toolbar>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="568" constant="568" id="EQ3-qm-uHK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uSP-fp-q6E" secondAttribute="bottom" id="L7r-jE-cxP"/>
+                                    <constraint firstItem="uSP-fp-q6E" firstAttribute="leading" secondItem="xkE-oE-NxA" secondAttribute="leading" id="QYI-2D-Py8"/>
+                                    <constraint firstAttribute="trailing" secondItem="uSP-fp-q6E" secondAttribute="trailing" id="lCH-SV-4DQ"/>
+                                    <constraint firstItem="uSP-fp-q6E" firstAttribute="top" secondItem="xkE-oE-NxA" secondAttribute="top" id="m6u-P3-QYN"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uSP-fp-q6E" firstAttribute="height" secondItem="6V9-ps-wmo" secondAttribute="height" priority="250" id="Of6-O4-jvG"/>
+                            <constraint firstItem="oEN-Le-ePm" firstAttribute="bottom" secondItem="xkE-oE-NxA" secondAttribute="bottom" priority="568" id="Pst-vZ-Iga"/>
+                            <constraint firstItem="xkE-oE-NxA" firstAttribute="leading" secondItem="oEN-Le-ePm" secondAttribute="leading" priority="568" id="Tmr-f3-UMY"/>
+                            <constraint firstItem="xkE-oE-NxA" firstAttribute="top" secondItem="oEN-Le-ePm" secondAttribute="top" priority="568" id="ZVK-83-QJ7"/>
+                            <constraint firstItem="uSP-fp-q6E" firstAttribute="width" secondItem="6V9-ps-wmo" secondAttribute="width" priority="568" id="pJc-sD-Jlg"/>
+                            <constraint firstItem="oEN-Le-ePm" firstAttribute="trailing" secondItem="xkE-oE-NxA" secondAttribute="trailing" priority="568" id="vnc-bE-ggp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oEN-Le-ePm"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MdW-ke-0Rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DIw-eA-3tx" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="-655"/>
+        </scene>
+        <!--ThreeFloorViewController-->
+        <scene sceneID="TT6-aA-wTi">
+            <objects>
+                <viewController title="ThreeFloorViewController" id="UJZ-WO-Ogu" customClass="ThreeFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I0d-bm-Iep">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6T-fg-zKP">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lye-S2-bFM" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKj-Z4-sRj">
+                                                <rect key="frame" x="112" y="0.0" width="200" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-7M-GtD">
+                                                <rect key="frame" x="8" y="0.0" width="85" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLl-q4-OiK">
+                                                <rect key="frame" x="8" y="116" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Afternoon Tea TEAROOM"/>
+                                                <connections>
+                                                    <action selector="AfternoonTapped:" destination="UJZ-WO-Ogu" eventType="touchUpInside" id="1eO-tD-XyY"/>
+                                                </connections>
+                                            </button>
+                                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3R-64-Bn0">
+                                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <items>
+                                                    <barButtonItem title="Back" id="YjB-xe-em6">
+                                                        <connections>
+                                                            <segue destination="BV1-FR-VrT" kind="presentation" id="lk7-03-V3F"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </items>
+                                            </toolbar>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="568" constant="568" id="94O-r0-l8u"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lye-S2-bFM" firstAttribute="leading" secondItem="w6T-fg-zKP" secondAttribute="leading" id="EJL-JX-GPJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="lye-S2-bFM" secondAttribute="bottom" id="QLk-NL-Fde"/>
+                                    <constraint firstAttribute="trailing" secondItem="lye-S2-bFM" secondAttribute="trailing" id="tca-Bh-UWm"/>
+                                    <constraint firstItem="lye-S2-bFM" firstAttribute="top" secondItem="w6T-fg-zKP" secondAttribute="top" id="vaB-Pj-QbM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lye-S2-bFM" firstAttribute="width" secondItem="I0d-bm-Iep" secondAttribute="width" priority="568" id="54m-RV-bLk"/>
+                            <constraint firstItem="lye-S2-bFM" firstAttribute="height" secondItem="I0d-bm-Iep" secondAttribute="height" priority="250" id="5fl-Sa-vgW"/>
+                            <constraint firstItem="lid-fx-Acw" firstAttribute="trailing" secondItem="w6T-fg-zKP" secondAttribute="trailing" priority="568" id="L7l-dg-yvn"/>
+                            <constraint firstItem="lid-fx-Acw" firstAttribute="bottom" secondItem="w6T-fg-zKP" secondAttribute="bottom" priority="568" id="Vsd-JN-J8d"/>
+                            <constraint firstItem="w6T-fg-zKP" firstAttribute="top" secondItem="lid-fx-Acw" secondAttribute="top" priority="568" id="bpj-05-xKY"/>
+                            <constraint firstItem="w6T-fg-zKP" firstAttribute="leading" secondItem="lid-fx-Acw" secondAttribute="leading" priority="568" id="y9P-DB-B4A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lid-fx-Acw"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qum-9M-LJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="-1363"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1F_layer2.png" width="327.3599853515625" height="110.16000366210938"/>
@@ -290,4 +463,7 @@
         <image name="button_layer1.png" width="173.75999450683594" height="173.52000427246094"/>
         <image name="grandfront_layer1.png" width="553.67999267578125" height="445.44000244140625"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IXj-9f-THW"/>
+    </inferredMetricsTieBreakers>
 </document>
