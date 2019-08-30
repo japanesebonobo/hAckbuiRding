@@ -12,8 +12,9 @@ import ARKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var button_layer1: SpringButton!
+    @IBOutlet weak var button_layer1: UIButton!
     @IBOutlet weak var grandfront_layer1: UIButton!
+    @IBOutlet weak var bone_layer2: UIButton!
     @IBOutlet weak var one_layer2: UIButton!
     @IBOutlet weak var two_layer2: UIButton!
     @IBOutlet weak var three_layer2: UIButton!
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
     let image = UIImage(named:"art.scnassets/button_layer1.png")!
     let image2 = UIImage(named: "art.scnassets/grandfront_layer1.png")!
     
+    let bonefloor_image = UIImage(named: "art.scnassets/B1F_layer2.png")!
     let onefloor_image = UIImage(named: "art.scnassets/1F_layer2.png")!
     let secondfloor_image = UIImage(named: "art.scnassets/2F_layer2.png")!
     let threefloor_image = UIImage(named: "art.scnassets/3F_layer2.png")!
@@ -59,6 +61,10 @@ class ViewController: UIViewController {
         
         grandfront_layer1.setImage(image2, for: .normal)
         grandfront_layer1.isHidden = true
+        
+        bone_layer2.setImage(bonefloor_image, for: .normal)
+        bone_layer2.isHidden = true
+
         
         one_layer2.setImage(onefloor_image, for: .normal)
         one_layer2.isHidden = true
@@ -117,7 +123,10 @@ class ViewController: UIViewController {
         self.seven_layer2.isHidden = false
         self.eight_layer2.isHidden = false
         self.nine_layer2.isHidden = false
+        self.bone_layer2.isHidden = false
     }
+    
+    
     
     @IBAction func one_layer2Tapped(_ sender: UIButton) {
         
