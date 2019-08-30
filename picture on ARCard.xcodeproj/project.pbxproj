@@ -45,6 +45,10 @@
 		37F9C30C2318183E0054D66B /* OneFloorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C30B2318183E0054D66B /* OneFloorViewController.swift */; };
 		37F9C3102318CDF70054D66B /* SecondFloorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C30F2318CDF70054D66B /* SecondFloorViewController.swift */; };
 		37F9C3122318E0F50054D66B /* ThreeFloorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C3112318E0F50054D66B /* ThreeFloorViewController.swift */; };
+		37F9C3142318E36C0054D66B /* FourFloorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C3132318E36C0054D66B /* FourFloorViewController.swift */; };
+		37F9C3162318E53A0054D66B /* FiveFloorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C3152318E53A0054D66B /* FiveFloorViewController.swift */; };
+		37F9C3182318EDE30054D66B /* SixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C3172318EDE30054D66B /* SixViewController.swift */; };
+		37F9C31A2318F8710054D66B /* SevenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C3192318F8710054D66B /* SevenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +93,10 @@
 		37F9C30B2318183E0054D66B /* OneFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFloorViewController.swift; sourceTree = "<group>"; };
 		37F9C30F2318CDF70054D66B /* SecondFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFloorViewController.swift; sourceTree = "<group>"; };
 		37F9C3112318E0F50054D66B /* ThreeFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeFloorViewController.swift; sourceTree = "<group>"; };
+		37F9C3132318E36C0054D66B /* FourFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourFloorViewController.swift; sourceTree = "<group>"; };
+		37F9C3152318E53A0054D66B /* FiveFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveFloorViewController.swift; sourceTree = "<group>"; };
+		37F9C3172318EDE30054D66B /* SixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixViewController.swift; sourceTree = "<group>"; };
+		37F9C3192318F8710054D66B /* SevenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,10 @@
 				37F9C30B2318183E0054D66B /* OneFloorViewController.swift */,
 				37F9C30F2318CDF70054D66B /* SecondFloorViewController.swift */,
 				37F9C3112318E0F50054D66B /* ThreeFloorViewController.swift */,
+				37F9C3132318E36C0054D66B /* FourFloorViewController.swift */,
+				37F9C3152318E53A0054D66B /* FiveFloorViewController.swift */,
+				37F9C3172318EDE30054D66B /* SixViewController.swift */,
+				37F9C3192318F8710054D66B /* SevenViewController.swift */,
 				37F9C2C023155FD70054D66B /* Main.storyboard */,
 				37F9C2C323155FD80054D66B /* Assets.xcassets */,
 				37F9C2C523155FD80054D66B /* LaunchScreen.storyboard */,
@@ -251,9 +263,11 @@
 				37F9C30323178C210054D66B /* SpringLabel.swift in Sources */,
 				37F9C30C2318183E0054D66B /* OneFloorViewController.swift in Sources */,
 				37F9C30123178C210054D66B /* AsyncButton.swift in Sources */,
+				37F9C3182318EDE30054D66B /* SixViewController.swift in Sources */,
 				37F9C2F923178C210054D66B /* SpringButton.swift in Sources */,
 				37F9C2FB23178C210054D66B /* Misc.swift in Sources */,
 				37F9C30823178C210054D66B /* LoadingView.swift in Sources */,
+				37F9C3162318E53A0054D66B /* FiveFloorViewController.swift in Sources */,
 				37F9C2F523178C210054D66B /* DesignableLabel.swift in Sources */,
 				37F9C2F223178C210054D66B /* ImageLoader.swift in Sources */,
 				37F9C2F623178C210054D66B /* SoundPlayer.swift in Sources */,
@@ -273,8 +287,10 @@
 				37F9C30023178C210054D66B /* DesignableTabBarController.swift in Sources */,
 				37F9C2F123178C210054D66B /* TransitionZoom.swift in Sources */,
 				37F9C2FE23178C210054D66B /* SpringTextField.swift in Sources */,
+				37F9C31A2318F8710054D66B /* SevenViewController.swift in Sources */,
 				37F9C30523178C210054D66B /* AutoTextView.swift in Sources */,
 				37F9C2EE23178C210054D66B /* DesignableImageView.swift in Sources */,
+				37F9C3142318E36C0054D66B /* FourFloorViewController.swift in Sources */,
 				37F9C2FA23178C210054D66B /* SpringTextView.swift in Sources */,
 				37F9C2BB23155FD70054D66B /* AppDelegate.swift in Sources */,
 				37F9C2F823178C210054D66B /* DesignableTextField.swift in Sources */,
