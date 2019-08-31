@@ -27,7 +27,7 @@
                                 </connections>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoH-Br-uNc" customClass="SpringButton" customModule="picture_on_ARCard">
-                                <rect key="frame" x="127" y="251" width="67" height="67"/>
+                                <rect key="frame" x="127" y="153" width="67" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button_layer1.png" backgroundImage="button_layer1.png"/>
                                 <userDefinedRuntimeAttributes>
@@ -38,14 +38,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="button_layer1Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="HW9-AS-bZU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF2-wv-olS">
-                                <rect key="frame" x="16" y="310" width="178" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="grandfront_layer1.png"/>
-                                <connections>
-                                    <action selector="grandfront_layer1Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="46X-Z5-ZLJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eM-MK-6LG">
@@ -137,6 +129,14 @@
                                     <segue destination="zCI-zi-coG" kind="presentation" id="toi-UE-Cbx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF2-wv-olS">
+                                <rect key="frame" x="16" y="212" width="178" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="grandfront_layer1.png"/>
+                                <connections>
+                                    <action selector="grandfront_layer1Tapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="46X-Z5-ZLJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
@@ -158,18 +158,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="tUg-ot-EpK">
-                    <connections>
-                        <action selector="objecttapped:" destination="BV1-FR-VrT" id="pqL-FL-C1J"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="tUg-ot-EpK"/>
             </objects>
             <point key="canvasLocation" x="50.625" y="20.070422535211268"/>
         </scene>
         <!--OneFloorViewController-->
         <scene sceneID="wWa-Zc-1Te">
             <objects>
-                <viewController title="OneFloorViewController" id="DRc-85-IOp" customClass="OneFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="one" title="OneFloorViewController" id="DRc-85-IOp" customClass="OneFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0mk-yS-bZq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,10 +249,18 @@
                                                 <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <items>
-                                                    <barButtonItem title="Back" id="2DF-eT-1Ym">
+                                                    <barButtonItem systemItem="camera" id="2DF-eT-1Ym">
                                                         <connections>
                                                             <segue destination="BV1-FR-VrT" kind="presentation" id="m9T-y1-EaX"/>
                                                         </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bRk-OS-xaR"/>
+                                                    <barButtonItem style="plain" id="7d9-kz-ooN">
+                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sWF-9q-Q2m" customClass="PickerViewKeyboard" customModule="picture_on_ARCard" customModuleProvider="target">
+                                                            <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Floor"/>
+                                                        </button>
                                                     </barButtonItem>
                                                 </items>
                                             </toolbar>
@@ -287,6 +291,9 @@
                         <viewLayoutGuide key="safeArea" id="fLu-Y4-JA7"/>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="FloorChange" destination="sWF-9q-Q2m" id="Yk7-EC-uxg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCu-07-SsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="VHj-AV-qJw" userLabel="Exit" sceneMemberID="exit"/>
@@ -296,7 +303,7 @@
         <!--SecondFloorViewController-->
         <scene sceneID="nv7-Kl-Hs2">
             <objects>
-                <viewController title="SecondFloorViewController" id="d7X-Wg-kHd" customClass="SecondFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="two" title="SecondFloorViewController" id="d7X-Wg-kHd" customClass="SecondFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6V9-ps-wmo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,10 +357,18 @@
                                                 <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <items>
-                                                    <barButtonItem title="Back" id="dzK-SD-bO3">
+                                                    <barButtonItem systemItem="camera" id="dzK-SD-bO3">
                                                         <connections>
                                                             <segue destination="BV1-FR-VrT" kind="presentation" id="IXj-9f-THW"/>
                                                         </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LaJ-zw-SuJ"/>
+                                                    <barButtonItem style="plain" id="bZ1-FN-q7s">
+                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" restorationIdentifier="FloorChange" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BeB-5r-she" customClass="PickerViewKeyboard" customModule="picture_on_ARCard" customModuleProvider="target">
+                                                            <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Floor"/>
+                                                        </button>
                                                     </barButtonItem>
                                                 </items>
                                             </toolbar>
@@ -384,6 +399,9 @@
                         <viewLayoutGuide key="safeArea" id="oEN-Le-ePm"/>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="FloorChange" destination="BeB-5r-she" id="NPU-xJ-8RQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MdW-ke-0Rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DIw-eA-3tx" userLabel="Exit" sceneMemberID="exit"/>
@@ -393,7 +411,7 @@
         <!--ThreeFloorViewController-->
         <scene sceneID="TT6-aA-wTi">
             <objects>
-                <viewController title="ThreeFloorViewController" id="UJZ-WO-Ogu" customClass="ThreeFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="three" title="ThreeFloorViewController" id="UJZ-WO-Ogu" customClass="ThreeFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I0d-bm-Iep">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,10 +443,18 @@
                                                 <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <items>
-                                                    <barButtonItem title="Back" id="YjB-xe-em6">
+                                                    <barButtonItem systemItem="camera" id="YjB-xe-em6">
                                                         <connections>
                                                             <segue destination="BV1-FR-VrT" kind="presentation" id="lk7-03-V3F"/>
                                                         </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DeI-9X-WP2"/>
+                                                    <barButtonItem style="plain" id="hgE-Ly-uQq">
+                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RYc-7q-hfh" customClass="PickerViewKeyboard" customModule="picture_on_ARCard" customModuleProvider="target">
+                                                            <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Floor"/>
+                                                        </button>
                                                     </barButtonItem>
                                                 </items>
                                             </toolbar>
@@ -459,6 +485,9 @@
                         <viewLayoutGuide key="safeArea" id="lid-fx-Acw"/>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="FloorChange" destination="RYc-7q-hfh" id="uyH-by-cV4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qum-9M-LJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -467,7 +496,7 @@
         <!--FourFloorViewController-->
         <scene sceneID="Mf9-vM-yR2">
             <objects>
-                <viewController title="FourFloorViewController" id="Yhh-Zb-xZ1" customClass="FourFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="four" title="FourFloorViewController" id="Yhh-Zb-xZ1" customClass="FourFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Csy-pd-R8j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -486,11 +515,10 @@
                                                 <rect key="frame" x="8" y="0.0" width="85" height="85"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ic-nz-RHF">
-                                                <rect key="frame" x="8" y="116" width="150" height="150"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ic-nz-RHF">
+                                                <rect key="frame" x="15" y="100" width="150" height="150"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="nana's green tea"/>
+                                                <state key="normal" title="nana's green tea" image="nana's_green_tea.png"/>
                                                 <connections>
                                                     <action selector="nanaTapped:" destination="Yhh-Zb-xZ1" eventType="touchUpInside" id="cqY-lb-nXI"/>
                                                 </connections>
@@ -498,16 +526,25 @@
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYP-vQ-Uwf">
                                                 <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <color key="backgroundColor" red="0.34521220359999999" green="0.80754282990000004" blue="0.041722846950000003" alpha="0.92294520550000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <items>
-                                                    <barButtonItem title="Back" id="Bdj-Th-YA7">
+                                                    <barButtonItem systemItem="camera" id="Bdj-Th-YA7">
                                                         <connections>
                                                             <segue destination="BV1-FR-VrT" kind="presentation" id="XXq-A5-kUn"/>
                                                         </connections>
                                                     </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Wh1-FL-rIX"/>
+                                                    <barButtonItem style="plain" id="KFK-hd-6Jh">
+                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3HW-5h-b5M" customClass="PickerViewKeyboard" customModule="picture_on_ARCard" customModuleProvider="target">
+                                                            <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Floor"/>
+                                                        </button>
+                                                    </barButtonItem>
                                                 </items>
                                             </toolbar>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.81124543573212748" green="1" blue="0.63360878009835553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="568" constant="568" id="kte-03-BmA"/>
                                         </constraints>
@@ -521,7 +558,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.81124543569999996" green="1" blue="0.63360878009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nWq-Lm-Dif" firstAttribute="height" secondItem="Csy-pd-R8j" secondAttribute="height" priority="250" id="3vO-Sx-ktP"/>
                             <constraint firstItem="afl-Gb-pdO" firstAttribute="bottom" secondItem="6gZ-NU-5sZ" secondAttribute="bottom" priority="568" id="HEK-w4-zS7"/>
@@ -533,6 +570,9 @@
                         <viewLayoutGuide key="safeArea" id="afl-Gb-pdO"/>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="FloorChange" destination="3HW-5h-b5M" id="0WP-UC-ubw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cuI-Je-jkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -541,7 +581,7 @@
         <!--FiveFloorViewController-->
         <scene sceneID="pg6-UR-2nF">
             <objects>
-                <viewController title="FiveFloorViewController" id="ac0-4M-LCh" customClass="FiveFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="five" title="FiveFloorViewController" id="ac0-4M-LCh" customClass="FiveFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aiI-oh-Rjf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -564,10 +604,18 @@
                                                 <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <items>
-                                                    <barButtonItem title="Back" id="E6L-x6-IQq">
+                                                    <barButtonItem systemItem="camera" id="E6L-x6-IQq">
                                                         <connections>
                                                             <segue destination="BV1-FR-VrT" kind="presentation" id="1mJ-lu-fcH"/>
                                                         </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ecN-yU-JRA"/>
+                                                    <barButtonItem style="plain" id="K08-wv-Ekn">
+                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gKX-a8-kWZ" customClass="PickerViewKeyboard" customModule="picture_on_ARCard" customModuleProvider="target">
+                                                            <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Floor"/>
+                                                        </button>
                                                     </barButtonItem>
                                                 </items>
                                             </toolbar>
@@ -605,6 +653,9 @@
                         <viewLayoutGuide key="safeArea" id="SBh-i5-ZNa"/>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="FloorChange" destination="gKX-a8-kWZ" id="KX2-MO-37S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frW-Og-3DE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -613,7 +664,7 @@
         <!--SixFloorViewController-->
         <scene sceneID="vlL-hT-s0o">
             <objects>
-                <viewController title="SixFloorViewController" id="B7e-OF-dFF" customClass="SixViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="six" title="SixFloorViewController" id="B7e-OF-dFF" customClass="SixViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mt2-pm-ffH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -645,10 +696,18 @@
                                                 <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <items>
-                                                    <barButtonItem title="Back" id="ATs-BT-V9m">
+                                                    <barButtonItem systemItem="camera" id="ATs-BT-V9m">
                                                         <connections>
                                                             <segue destination="BV1-FR-VrT" kind="presentation" id="5zg-FR-rdh"/>
                                                         </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nH0-bg-meV"/>
+                                                    <barButtonItem style="plain" id="bGB-cM-RVC">
+                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aQg-Bf-LjO" customClass="PickerViewKeyboard" customModule="picture_on_ARCard" customModuleProvider="target">
+                                                            <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Floor"/>
+                                                        </button>
                                                     </barButtonItem>
                                                 </items>
                                             </toolbar>
@@ -679,6 +738,9 @@
                         <viewLayoutGuide key="safeArea" id="cFq-Ah-xhj"/>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="FloorChange" destination="aQg-Bf-LjO" id="VNR-Zx-s7P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVB-dv-PFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -687,7 +749,7 @@
         <!--SevenFloorViewController-->
         <scene sceneID="5v5-Z3-vW9">
             <objects>
-                <viewController title="SevenFloorViewController" id="9RK-Cb-GIs" customClass="SevenViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="seven" title="SevenFloorViewController" id="9RK-Cb-GIs" customClass="SevenViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ehh-zP-AQY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="2400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1002,13 +1064,21 @@
                                                 </connections>
                                             </button>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dw-hq-aLl">
-                                                <rect key="frame" x="8" y="2324" width="304" height="44"/>
+                                                <rect key="frame" x="0.0" y="2334" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <items>
-                                                    <barButtonItem title="Back" id="HDg-DG-GZg">
+                                                    <barButtonItem systemItem="camera" id="HDg-DG-GZg">
                                                         <connections>
                                                             <segue destination="BV1-FR-VrT" kind="presentation" id="PPP-9c-scj"/>
                                                         </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lS2-U9-o6A"/>
+                                                    <barButtonItem style="plain" id="GQY-AD-RTk">
+                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IyI-S2-zsE" customClass="PickerViewKeyboard" customModule="picture_on_ARCard" customModuleProvider="target">
+                                                            <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Floor"/>
+                                                        </button>
                                                     </barButtonItem>
                                                 </items>
                                             </toolbar>
@@ -1039,16 +1109,19 @@
                         <viewLayoutGuide key="safeArea" id="Kaw-EB-Kk8"/>
                     </view>
                     <size key="freeformSize" width="320" height="2400"/>
+                    <connections>
+                        <outlet property="FloorChange" destination="IyI-S2-zsE" id="mrN-PP-iJQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ri8-aa-5IG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zNI-cJ-HaN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-898" y="1278"/>
+            <point key="canvasLocation" x="-898.125" y="1277.1126760563379"/>
         </scene>
         <!--EightFloorViewController-->
         <scene sceneID="55a-lp-XLs">
             <objects>
-                <viewController title="EightFloorViewController" id="n6c-Cs-2jh" customClass="EightFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="eight" title="EightFloorViewController" id="n6c-Cs-2jh" customClass="EightFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="56B-Uy-J3O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1067,17 +1140,6 @@
                                                 <rect key="frame" x="8" y="0.0" width="85" height="85"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s9D-jU-9Gu">
-                                                <rect key="frame" x="0.0" y="775" width="320" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                <items>
-                                                    <barButtonItem title="Back" id="4IQ-fg-QEs">
-                                                        <connections>
-                                                            <segue destination="BV1-FR-VrT" kind="presentation" id="Coh-Ja-sIe"/>
-                                                        </connections>
-                                                    </barButtonItem>
-                                                </items>
-                                            </toolbar>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MG-Ob-wCg">
                                                 <rect key="frame" x="8" y="122" width="150" height="150"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1171,6 +1233,25 @@
                                                     <action selector="SantyokuTapped:" destination="n6c-Cs-2jh" eventType="touchUpInside" id="7jn-qe-ZBD"/>
                                                 </connections>
                                             </button>
+                                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s9D-jU-9Gu">
+                                                <rect key="frame" x="0.0" y="786" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <items>
+                                                    <barButtonItem systemItem="camera" id="4IQ-fg-QEs">
+                                                        <connections>
+                                                            <segue destination="BV1-FR-VrT" kind="presentation" id="Coh-Ja-sIe"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RLy-H0-ip4"/>
+                                                    <barButtonItem style="plain" id="N93-yK-6qD">
+                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uHD-Ff-oGk" customClass="PickerViewKeyboard" customModule="picture_on_ARCard" customModuleProvider="target">
+                                                            <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Floor"/>
+                                                        </button>
+                                                    </barButtonItem>
+                                                </items>
+                                            </toolbar>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1198,6 +1279,9 @@
                         <viewLayoutGuide key="safeArea" id="0h9-ex-jOs"/>
                     </view>
                     <size key="freeformSize" width="320" height="850"/>
+                    <connections>
+                        <outlet property="FloorChange" destination="uHD-Ff-oGk" id="v7M-yw-1QU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5G-tx-YZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1206,7 +1290,7 @@
         <!--NineFloorViewController-->
         <scene sceneID="deE-dP-Nfe">
             <objects>
-                <viewController title="NineFloorViewController" id="U9U-PF-a3n" customClass="NineFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nine" title="NineFloorViewController" id="U9U-PF-a3n" customClass="NineFloorViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zzt-w8-Aex">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1238,10 +1322,18 @@
                                                 <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <items>
-                                                    <barButtonItem title="Back" id="uSL-2U-nMb">
+                                                    <barButtonItem title="Back" systemItem="camera" id="uSL-2U-nMb">
                                                         <connections>
                                                             <segue destination="BV1-FR-VrT" kind="presentation" id="aN4-qd-QXg"/>
                                                         </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UdL-RJ-77l"/>
+                                                    <barButtonItem style="plain" id="O2C-P4-e5N">
+                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rKG-jw-QAC" customClass="PickerViewKeyboard" customModule="picture_on_ARCard" customModuleProvider="target">
+                                                            <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Floor"/>
+                                                        </button>
                                                     </barButtonItem>
                                                 </items>
                                             </toolbar>
@@ -1272,6 +1364,9 @@
                         <viewLayoutGuide key="safeArea" id="Mec-jf-hWn"/>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="FloorChange" destination="rKG-jw-QAC" id="dO6-04-jl3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOq-VM-e6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1280,7 +1375,7 @@
         <!--BoneFloorViewController-->
         <scene sceneID="yFt-ot-dFd">
             <objects>
-                <viewController title="BoneFloorViewController" id="zCI-zi-coG" customClass="BoneViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bone" title="BoneFloorViewController" id="zCI-zi-coG" customClass="BoneViewController" customModule="picture_on_ARCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r1L-IJ-cvh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1030"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1404,13 +1499,21 @@
                                                 </connections>
                                             </button>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R83-Nm-mYJ">
-                                                <rect key="frame" x="0.0" y="978" width="320" height="44"/>
+                                                <rect key="frame" x="0.0" y="968" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <items>
-                                                    <barButtonItem title="Back" id="QNm-on-XhK">
+                                                    <barButtonItem systemItem="camera" id="QNm-on-XhK">
                                                         <connections>
                                                             <segue destination="BV1-FR-VrT" kind="presentation" id="kNP-5E-rtl"/>
                                                         </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eeZ-dc-v92"/>
+                                                    <barButtonItem style="plain" id="JUf-KZ-BR2">
+                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gVD-sW-8vy" customClass="PickerViewKeyboard" customModule="picture_on_ARCard" customModuleProvider="target">
+                                                            <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Floor"/>
+                                                        </button>
                                                     </barButtonItem>
                                                 </items>
                                             </toolbar>
@@ -1441,6 +1544,9 @@
                         <viewLayoutGuide key="safeArea" id="MB5-SV-ELk"/>
                     </view>
                     <size key="freeformSize" width="320" height="1030"/>
+                    <connections>
+                        <outlet property="FloorChange" destination="gVD-sW-8vy" id="zD5-U9-OvE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qmu-uB-8xq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1460,8 +1566,9 @@
         <image name="B1F_layer2.png" width="327.3599853515625" height="104.16000366210938"/>
         <image name="button_layer1.png" width="173.75999450683594" height="173.52000427246094"/>
         <image name="grandfront_layer1.png" width="553.67999267578125" height="445.44000244140625"/>
+        <image name="nana's_green_tea.png" width="511.92001342773438" height="511.92001342773438"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kNP-5E-rtl"/>
+        <segue reference="XXq-A5-kUn"/>
     </inferredMetricsTieBreakers>
 </document>

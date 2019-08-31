@@ -9,12 +9,15 @@
 import UIKit
 import SafariServices
 
-class SevenViewController: UIViewController {
-
+class SevenViewController: UIViewController, PickerViewKeyboardDelegate {
+    @IBOutlet weak var FloorChange: PickerViewKeyboard!
+    let dataSource =  ["B1F", "1F", "2F", "3F", "4F", "5F", "6F", "7F", "8F", "9F"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        FloorChange.delegate = self as! PickerViewKeyboardDelegate
     }
     
     @IBAction func DonTapped(_ sender: UIButton) {
@@ -185,15 +188,59 @@ class SevenViewController: UIViewController {
         present(safariController, animated: true, completion: nil)
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func titlesOfPickerViewKeyboard(sender: PickerViewKeyboard) -> Array<String> {
+        return dataSource
     }
-    */
-
+    func initSelectedRow(sender: PickerViewKeyboard) -> Int {
+        return 0
+    }
+    func didDone(sender: PickerViewKeyboard, selectedData: String) {
+        switch selectedData {
+        case "B1F":
+            let storyboard: UIStoryboard = self.storyboard!
+            let bone = storyboard.instantiateViewController(withIdentifier: "bone")
+            self.present(bone, animated: true, completion: nil)
+        case "1F":
+            let storyboard: UIStoryboard = self.storyboard!
+            let one = storyboard.instantiateViewController(withIdentifier: "one")
+            self.present(one, animated: true, completion: nil)
+        case "2F":
+            let storyboard: UIStoryboard = self.storyboard!
+            let two = storyboard.instantiateViewController(withIdentifier: "two")
+            self.present(two, animated: true, completion: nil)
+        case "3F":
+            let storyboard: UIStoryboard = self.storyboard!
+            let three = storyboard.instantiateViewController(withIdentifier: "three")
+            self.present(three, animated: true, completion: nil)
+        case "4F":
+            let storyboard: UIStoryboard = self.storyboard!
+            let four = storyboard.instantiateViewController(withIdentifier: "four")
+            self.present(four, animated: true, completion: nil)
+        case "5F":
+            let storyboard: UIStoryboard = self.storyboard!
+            let five = storyboard.instantiateViewController(withIdentifier: "five")
+            self.present(five, animated: true, completion: nil)
+        case "6F":
+            let storyboard: UIStoryboard = self.storyboard!
+            let six = storyboard.instantiateViewController(withIdentifier: "six")
+            self.present(six, animated: true, completion: nil)
+        case "7F":
+            let storyboard: UIStoryboard = self.storyboard!
+            let seven = storyboard.instantiateViewController(withIdentifier: "seven")
+            self.present(seven, animated: true, completion: nil)
+        case "8F":
+            let storyboard: UIStoryboard = self.storyboard!
+            let eight = storyboard.instantiateViewController(withIdentifier: "eight")
+            self.present(eight, animated: true, completion: nil)
+        case "9F":
+            let storyboard: UIStoryboard = self.storyboard!
+            let nine = storyboard.instantiateViewController(withIdentifier: "nine")
+            self.present(nine, animated: true, completion: nil)
+        default:
+            break
+        }
+    }
+    func didCancel(sender: PickerViewKeyboard) {
+        
+    }
 }

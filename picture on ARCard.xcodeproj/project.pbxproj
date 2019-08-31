@@ -52,10 +52,11 @@
 		37F9C31C231912990054D66B /* EightFloorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C31B231912990054D66B /* EightFloorViewController.swift */; };
 		37F9C31E231963140054D66B /* NineFloorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C31D231963140054D66B /* NineFloorViewController.swift */; };
 		37F9C320231967210054D66B /* BoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C31F231967210054D66B /* BoneViewController.swift */; };
+		37F9C32223197EDE0054D66B /* PickerViewKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9C32123197EDE0054D66B /* PickerViewKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37F9C2B723155FD70054D66B /* picture on ARCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "picture on ARCard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F9C2B723155FD70054D66B /* hAck buiRding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hAck buiRding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F9C2BA23155FD70054D66B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F9C2BC23155FD70054D66B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		37F9C2BE23155FD70054D66B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		37F9C31B231912990054D66B /* EightFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EightFloorViewController.swift; sourceTree = "<group>"; };
 		37F9C31D231963140054D66B /* NineFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineFloorViewController.swift; sourceTree = "<group>"; };
 		37F9C31F231967210054D66B /* BoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoneViewController.swift; sourceTree = "<group>"; };
+		37F9C32123197EDE0054D66B /* PickerViewKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +129,7 @@
 		37F9C2B823155FD70054D66B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37F9C2B723155FD70054D66B /* picture on ARCard.app */,
+				37F9C2B723155FD70054D66B /* hAck buiRding.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +152,7 @@
 				37F9C31B231912990054D66B /* EightFloorViewController.swift */,
 				37F9C31D231963140054D66B /* NineFloorViewController.swift */,
 				37F9C2C023155FD70054D66B /* Main.storyboard */,
+				37F9C32123197EDE0054D66B /* PickerViewKeyboard.swift */,
 				37F9C2C323155FD80054D66B /* Assets.xcassets */,
 				37F9C2C523155FD80054D66B /* LaunchScreen.storyboard */,
 				37F9C2C823155FD80054D66B /* Info.plist */,
@@ -211,7 +214,7 @@
 			);
 			name = "picture on ARCard";
 			productName = "picture on ARCard";
-			productReference = 37F9C2B723155FD70054D66B /* picture on ARCard.app */;
+			productReference = 37F9C2B723155FD70054D66B /* hAck buiRding.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -289,6 +292,7 @@
 				37F9C2F323178C210054D66B /* Spring.swift in Sources */,
 				37F9C30A23178C210054D66B /* AsyncImageView.swift in Sources */,
 				37F9C2FF23178C210054D66B /* DesignableView.swift in Sources */,
+				37F9C32223197EDE0054D66B /* PickerViewKeyboard.swift in Sources */,
 				37F9C2F723178C210054D66B /* BlurView.swift in Sources */,
 				37F9C3122318E0F50054D66B /* ThreeFloorViewController.swift in Sources */,
 				37F9C2F023178C210054D66B /* TransitionManager.swift in Sources */,
@@ -452,15 +456,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MRDM934TH6;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "picture on ARCard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.yuuta.emoji;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "hAck buiRding";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,15 +477,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MRDM934TH6;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "picture on ARCard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.yuuta.emoji;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "hAck buiRding";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
